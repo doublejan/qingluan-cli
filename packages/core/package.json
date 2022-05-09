@@ -22,5 +22,6 @@
   "dependencies": {
     "@qingluan/utils": "^1.0.1",
     "dayjs": "^1.11.1"
-  }
+  },
+  "gitHead": "904372d4396c5fede8562f4d5d8eeda09e4273f6"
 }

@@ -23,5 +23,6 @@
     "dayjs": "^1.11.1",
     "jquery": "2",
     "lodash": "^4.17.21"
-  }
+  },
+  "gitHead": "904372d4396c5fede8562f4d5d8eeda09e4273f6"
 }

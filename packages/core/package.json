@@ -1,6 +1,6 @@
 {
   "name": "@qingluan/cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "> TODO: description",
   "author": "doublejan <954464727@qq.com>",
   "homepage": "",
@@ -20,7 +20,7 @@
     "test": "echo \"test core\""
   },
   "dependencies": {
-    "@qingluan/utils": "^1.0.1",
+    "@qingluan/utils": "^1.0.2",
     "dayjs": "^1.11.1"
   },
   "gitHead": "904372d4396c5fede8562f4d5d8eeda09e4273f6"

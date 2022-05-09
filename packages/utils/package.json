@@ -1,0 +1,27 @@
+{
+  "name": "@qingluan/utils",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "doublejan <954464727@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "scripts": {
+    "test": "echo \"test utils\""
+  },
+  "dependencies": {
+    "dayjs": "^1.11.1",
+    "jquery": "2",
+    "lodash": "^4.17.21"
+  }
+}

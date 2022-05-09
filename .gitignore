@@ -1,0 +1,15 @@
+# 忽略依赖
+node_modules
+packages/**/node_modules
+
+# 忽略平台文件
+.vscode
+.idea
+
+# 忽略日志
+.log
+.txt
+
+# 忽略 lock 文件
+packages/**/package-lock.json
+

@@ -7,9 +7,6 @@ packages/**/node_modules
 .idea
 
 # 忽略日志
-.log
-.txt
-
-# 忽略 lock 文件
-packages/**/package-lock.json
+*.log
+*.txt
 

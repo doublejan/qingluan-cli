@@ -17,7 +17,8 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "scripts": {
     "test": "echo \"test core\""
@@ -25,5 +26,5 @@
   "dependencies": {
     "@qingluan/utils": "^1.0.3"
   },
-  "gitHead": "904372d4396c5fede8562f4d5d8eeda09e4273f6"
+  "gitHead": "25f3697cd966e33cbd2a5306733b4ce464915d11"
 }

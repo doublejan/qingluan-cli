@@ -1,6 +1,6 @@
 {
   "name": "@qingluan/cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "> TODO: description",
   "author": "doublejan <954464727@qq.com>",
   "homepage": "",
@@ -24,7 +24,7 @@
     "test": "echo \"test core\""
   },
   "dependencies": {
-    "@qingluan/utils": "^1.0.3"
+    "@qingluan/utils": "^1.0.4"
   },
   "gitHead": "25f3697cd966e33cbd2a5306733b4ce464915d11"
 }

@@ -14,15 +14,10 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "test": "echo \"test utils\""
   },
-  "dependencies": {
-    "dayjs": "^1.11.1",
-    "jquery": "2",
-    "lodash": "^4.17.21"
-  },
-  "gitHead": "904372d4396c5fede8562f4d5d8eeda09e4273f6"
+  "gitHead": "c5159d4d24cb27ea0d217e075774980db6d684d8"
 }

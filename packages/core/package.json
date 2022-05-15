@@ -24,7 +24,7 @@
     "test": "echo \"test core\""
   },
   "dependencies": {
-    "@qingluan/utils": "^1.0.4"
+    "@qingluan/utils": "file:../utils"
   },
   "gitHead": "25f3697cd966e33cbd2a5306733b4ce464915d11"
 }

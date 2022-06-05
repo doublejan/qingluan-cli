@@ -1,14 +1,14 @@
 {
-  "name": "@qingluan/cli",
+  "name": "@qingluan/utils",
   "version": "1.0.4",
   "description": "> TODO: description",
   "author": "doublejan <954464727@qq.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/core.js",
   "bin": {
-    "qcli": "bin/index.js"
+    "utils": "lib/index.js"
   },
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -21,10 +21,7 @@
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"test core\""
-  },
-  "dependencies": {
-    "@qingluan/utils": "file:../utils"
+    "test": "echo \"test utils\""
   },
   "gitHead": "25f3697cd966e33cbd2a5306733b4ce464915d11"
 }

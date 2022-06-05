@@ -1,5 +1,9 @@
 #! /usr/bin/env node
-const utils = require('@qingluan/utils');
 
-console.log('Welcome, qingluan cli');
-utils();
+const importLocal = require('import-local');
+
+if (importLocal(__filename)) {
+  require('npmlog').info('cli', 'using qingluan-cli local version');
+} else {
+  require('../lib')(process.argv.slice(2));
+}

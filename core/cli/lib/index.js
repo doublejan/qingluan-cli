@@ -1,7 +1,15 @@
 'use strict';
 
-module.exports = cli;
+const log = require('@qingluan/log');
+const pkg = require('../package.json');
 
 function cli() {
-    console.log('Welcome Qingluan');
+  checkPkgVersion();
 }
+
+function checkPkgVersion() {
+  log.info('version', pkg.version);
+  return pkg.version;
+}
+
+module.exports = cli;

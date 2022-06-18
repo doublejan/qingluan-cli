@@ -1,0 +1,31 @@
+{
+  "name": "@qingluan/get-npm-info",
+  "version": "1.0.6",
+  "description": "提供 npm 包相关的工具方法",
+  "author": "doublejan <954464727@qq.com>",
+  "homepage": "https://github.com/doublejan/qingluan-cli#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doublejan/qingluan-cli.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/doublejan/qingluan-cli/issues"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "semver": "^7.3.7",
+    "url-join": "^5.0.0"
+  }
+}

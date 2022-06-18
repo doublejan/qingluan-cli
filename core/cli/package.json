@@ -25,9 +25,13 @@
     "test": "echo \"test cli\""
   },
   "dependencies": {
+    "@qingluan/get-npm-info": "file:../../utils/get-npm-info",
     "@qingluan/log": "file:../../utils/log",
     "colors": "^1.4.0",
+    "dedent": "^0.7.0",
+    "dotenv": "^16.0.1",
     "import-local": "^3.1.0",
+    "minimist": "^1.2.6",
     "root-check": "^2.0.0",
     "semver": "^7.3.7",
     "user-home": "^3.0.0"

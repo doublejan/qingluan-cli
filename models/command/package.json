@@ -1,5 +1,5 @@
 {
-  "name": "@qingluan/init",
+  "name": "@qingluan/command",
   "version": "1.0.6",
   "description": "> TODO: description",
   "author": "doublejan <954464727@qq.com>",
@@ -27,6 +27,9 @@
     "url": "https://github.com/doublejan/qingluan-cli/issues"
   },
   "dependencies": {
-    "@qingluan/command": "file:../../models/command"
+    "@qingluan/log": "file:../../utils/log",
+    "@qingluan/utils": "file:../../commands/utils",
+    "colors": "^1.4.0",
+    "semver": "^7.3.7"
   }
 }

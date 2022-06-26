@@ -1,8 +1,7 @@
-#! /usr/bin/env node
+'use strict'
 
-module.exports = utils;
+const isObject = o => Object.prototype.toString.call(o) === '[object Object]';
 
-function utils() {
-    // TODO
-    console.log('qingluan utils');
-}
+module.exports = {
+  isObject,
+};

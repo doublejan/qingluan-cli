@@ -4,6 +4,7 @@ const path = require('path');
 const semver = require('semver');
 const colors = require('colors/safe');
 const log = require('@qingluan/log');
+const exec = require('@qingluan/exec');
 const pkg = require('../package.json');
 const userHome = require('user-home');
 const minimist = require('minimist');
@@ -11,11 +12,16 @@ const { existsSync : pathExits } = require('./path-exits');
 const constants = require('../lib/constants');
 const { getNpmSemverVersion } = require('@qingluan/get-npm-info');
 const dedent = require('dedent');
+const commander = require('commander');
+
+const init = require('@qingluan/init');
 
 // 解析后的入参对象
 let args = {};
 // 环境变量对象
 let config = {};
+// commander 实例
+const program = new commander.Command();
 
 function cli() {
   try {
@@ -23,9 +29,10 @@ function cli() {
     checkNodeVersion();
     checkRoot();
     checkUserHome();
-    checkInputArgs();
+    // checkInputArgs();
     checkEnv();
     checkGlobalUpdate();
+    registryCommand();
   } catch (e) {
     log.error(e.message);
   }
@@ -126,6 +133,53 @@ async function checkGlobalUpdate() {
     `));
     log.warn(colors.yellow(dedent`更新命令：npm install -g ${npmName}`));
   }
+}
+
+// 注册命令
+function registryCommand() {
+  program
+    .version(pkg.version)
+    .name('qingluan')
+    .usage('<command> [option]')
+    .option('-d, --debug', 'enable debug mode', false)
+    .option('-tp, --targetPath <targetPath>', '是否指定本地调试文件路径', '');
+
+  program
+    .command('init [project]')
+    .option('-f, --force', '是否强制初始化项目')
+    .action(exec);
+  
+  // debug 模式
+  program.on('option:debug', () => {
+    if (program.debug) {
+      process.env.LOG_LEVEL = 'verbose';
+    } else {
+      process.env.LOG_LEVEL = 'info';
+    }
+    log.level = process.env.LOG_LEVEL;
+  });
+
+  // 指定 targetPath
+  program.on('option:targetPath', () => {
+    process.env.CLI_TARGET_PATH = program.opts()?.targetPath || '';
+  });
+
+  // 对未知命令监听
+  program.on('command:*', (args) => {
+    const availableCommands = program.commands.map(cmd => cmd.name());
+    log.error(colors.red(dedent`未知命令: ${args[0]}`));
+    if (availableCommands.length > 0) {
+      log.info(colors.yellow(dedent`可用命令: ${availableCommands.join(', ')}`));
+    }
+  });
+
+  // 没有使用子命令时给出定制提示
+  if (program.commands && program.commands.length < 1) {
+    program.outputHelp();
+    console.log('');
+  }
+
+  program.parse(process.argv);
 }
 
 module.exports = cli;

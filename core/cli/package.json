@@ -27,7 +27,10 @@
   "dependencies": {
     "@qingluan/get-npm-info": "file:../../utils/get-npm-info",
     "@qingluan/log": "file:../../utils/log",
+    "@qingluan/init": "file:../../commands/init",
+    "@qingluan/exec": "file:../exec",
     "colors": "^1.4.0",
+    "commander": "^9.3.0",
     "dedent": "^0.7.0",
     "dotenv": "^16.0.1",
     "import-local": "^3.1.0",

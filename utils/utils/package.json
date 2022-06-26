@@ -5,9 +5,6 @@
   "author": "doublejan <954464727@qq.com>",
   "homepage": "",
   "license": "ISC",
-  "bin": {
-    "utils": "lib/index.js"
-  },
   "main": "lib/index.js",
   "directories": {
     "lib": "lib",

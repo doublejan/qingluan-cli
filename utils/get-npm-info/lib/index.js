@@ -40,7 +40,7 @@ function getSemverVersion(baseVersion, versions) {
   // 之后为了健壮性，还需要对其按照大小（新旧）排序，越新的版本越靠前
   return versions
     .filter(version => semver.satisfies(version, `^${baseVersion}`))
-    .sort((a, b) => semver.gt(b, a));
+    .sort((a, b) => semver.gt(b, a) ? 1 : -1);
 }
 
 async function getNpmSemverVersion(baseVersion, npmName, registry) {
@@ -52,9 +52,18 @@ async function getNpmSemverVersion(baseVersion, npmName, registry) {
   return null;
 }
 
+async function getNpmLatestVersion(npmName, registry) {
+  const versions = await getNpmVersions(npmName, registry);
+  if (versions) {
+    return versions.sort((a, b) => semver.gt(b, a) ? 1 : -1)[0];
+  }
+  return null;
+}
+
 module.exports = {
   getNpmInfo,
   getDefaultRegistry,
   getNpmVersions,
   getNpmSemverVersion,
+  getNpmLatestVersion,
 };
